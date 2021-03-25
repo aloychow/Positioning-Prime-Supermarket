@@ -9,7 +9,7 @@ cssselect==1.1.0
 cycler==0.10.0
 Cython==0.29.17
 dash==1.16.0
-dash-bootstrap-components==0.11.0
+dash-bootstrap-components>=0.10.1
 dash-core-components==1.12.0
 dash-html-components==1.1.1
 dash-renderer==1.8.0
