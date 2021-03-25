@@ -9,6 +9,8 @@ from app import app, server
 from assets.styles import CONTENT_STYLE
 from sidebar import sidebar
 
+from apps import homepage
+
 ## ---------- Creating layout using dash and bootstrap ---------- ##
 app.layout = dbc.Container([
     html.Div([
@@ -28,7 +30,7 @@ app.layout = dbc.Container([
               [Input('url', 'pathname')])
 def display_page(pathname):
     if pathname == '/apps/homepage':
-        pass
+        return homepage.layout
 
 
 if __name__ == '__main__':

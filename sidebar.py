@@ -16,7 +16,7 @@ sidebar = html.Div(
             [
                 dbc.NavLink("Home", href="/apps/homepage"),
                 
-                dbc.NavLink("1", href="/apps/1"),
+                dbc.NavLink("Sentiment Analysis", href="/apps/1"),
                 
                 dbc.DropdownMenu([
                     dbc.NavLink("2.1",
