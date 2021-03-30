@@ -15,27 +15,15 @@ sidebar = html.Div(
         dbc.Nav(
             [
                 dbc.NavLink("Home", href="/apps/homepage"),
-                
-                dbc.NavLink("Sentiment Analysis", href="/apps/1"),
-                
-                dbc.DropdownMenu([
-                    dbc.NavLink("2.1",
-                                href="/apps/2.1",
-                                active="exact"),
-                    dbc.NavLink("2.2",
-                                href="/apps/2.2",
-                                active="exact")],
-                    label="2",
-                    nav=True,
-                ),
 
-                dbc.DropdownMenu([
-                    dbc.NavLink("3.1", href="/apps/sentiment_analysis/analysis_reddit"),
-                    dbc.NavLink("3.2", href="/apps/sentiment_analysis/sentiment_analysis_twitter"),
-                ],
-                    label="Sentiment Analysis",
-                    nav=True,
-                ),
+                dbc.NavLink("Sentiment Analysis", href="/apps/sentiment"),
+
+                dbc.NavLink("Association Rules", href="/apps/association"),
+
+                dbc.NavLink("Optical Character Recognition", href="/apps/ocr"),
+
+                dbc.NavLink("Fast Region CNN", href="/apps/rcnn"),
+
             ],
             vertical=True,
             # pills=True,

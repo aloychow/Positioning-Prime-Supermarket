@@ -1,5 +1,4 @@
 appdirs==1.4.4
-beautifulsoup4==4.9.3
 Brotli==1.0.9
 bs4==0.0.1
 certifi==2020.12.5
@@ -64,7 +63,6 @@ tqdm==4.54.1
 Unidecode==1.1.2
 update-checker==0.18.0
 urllib3==1.26.2
-vaderSentiment==3.3.2
 w3lib==1.22.0
 websocket-client==0.57.0
 websockets==8.1

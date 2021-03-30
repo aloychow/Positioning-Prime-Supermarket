@@ -10,6 +10,10 @@ from assets.styles import CONTENT_STYLE
 from sidebar import sidebar
 
 from apps import homepage
+from apps.sentiment import sentiment
+from apps.association import association
+from apps.ocr import ocr
+from apps.rcnn import rcnn
 
 ## ---------- Creating layout using dash and bootstrap ---------- ##
 app.layout = dbc.Container([
@@ -30,6 +34,17 @@ app.layout = dbc.Container([
               [Input('url', 'pathname')])
 def display_page(pathname):
     if pathname == '/apps/homepage':
+        return homepage.layout
+    if pathname == '/apps/sentiment':
+        return sentiment.layout
+    if pathname == '/apps/association':
+        return association.layout
+    if pathname == '/apps/ocr':
+        return ocr.layout
+    if pathname == '/apps/rcnn':
+        return rcnn.layout
+
+    else:
         return homepage.layout
 
 
