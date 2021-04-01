@@ -49,9 +49,11 @@ layout = dbc.Container([
                 [
 
                     html.H5(
-                        'We determine the percentage ratio of positive and negative reviews. We then conduct word '
-                        'review based on positive and negative feedback, to determine what to continue doing and what '
-                        'to improve on.',
+                        'Association rules will help us determine the products customers often buy in tandem. Baskets '
+                        'of products will be formed based on the minimum confidence, support and lift that we '
+                        'specify. We will be using a dataset which contains the list of products purchased at '
+                        'supermarkets by different families in Brazil to emulate Singapore’s supermarket transaction '
+                        'history. ',
                         className="card-text",
                     ),
 
