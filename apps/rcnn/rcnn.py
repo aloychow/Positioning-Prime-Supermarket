@@ -168,7 +168,13 @@ layout = dbc.Container([
                         className="card-text",
                     ),
 
-                    html.Br(),
+                    dbc.CardImg(src=app.get_asset_url('graph.png'),
+                                style={'height': '100%', 'width': '100%'}, className='center', top=True),
+
+                    html.H5(
+                        'A simulation of the shoppers against time over 5 days.',
+                        className="card-text",
+                    ),
 
                 ]
             ),
