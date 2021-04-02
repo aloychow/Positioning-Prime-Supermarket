@@ -11,7 +11,7 @@ from dash.dependencies import Input, Output
 import id_factory as idf
 from app import app
 
-id_start = idf.init_id('homepage')
+id_start = idf.init_id('sentiment')
 
 # Import dataset
 # Retrieve path
@@ -156,6 +156,7 @@ layout = dbc.Container([
 
 ])
 
+
 # Callbacks
 
 @app.callback(
@@ -163,14 +164,12 @@ layout = dbc.Container([
     [Input(component_id=idf.gen_id(id_start, 'slider'), component_property='value')]
 )
 def update_table(range2):
-
     table = pd.DataFrame(columns=['Review', 'Rating', 'Sentiment', 'Type'])  # Create empty dataframe
 
     final_range = []
 
-    for i in range(range2[0], range2[1]+1):
+    for i in range(range2[0], range2[1] + 1):
         final_range.append(i)
-
 
     table = sentiment_table[sentiment_table['Rating'].isin(final_range)]
 
