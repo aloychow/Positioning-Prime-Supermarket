@@ -41,9 +41,7 @@ layout = dbc.Container([
                 [
 
                     html.H5(
-                        'To ensure Prime Supermarket has an optimal floor plan and layout for shopping, association '
-                        'rules can be used to build recommender systems and allow for optimal placing of products '
-                        'purchased in tandem.',
+                        "Product placement influences customers' shopping behaviour. By placing complementary products near each other, customers will not be required to navigate through the entire store to find a complementary item. This will greatly enhance customers' shopping experience through increased convenience. Moreover, it also promotes the purchasing of complementary items, boosting sales for Prime. Given this in mind, we decided to use association rules to help Prime Supermarket find the most important complementary product pairings .",
                         className="card-text",
                     ),
 
@@ -76,23 +74,53 @@ layout = dbc.Container([
                     html.Br(),
 
                     html.H5(
-                        'The threshold of the sentiment analysis is set to ±0.2. If the compound score of a review is '
-                        'greater than 0.2, the review is considered positive. If the score is less than -0.2, '
-                        'the review is negative.',
+                        "But before that, we have to organise the dataset to suit our analysis.",
                         className='card-text'
                     ),
 
+                    html.H5(
+                        "First, the dataset was originally in a long data format. Thus, we first converted it into a wide data format: ",
+                        className='card-text'
+                    ),
+
+                    dbc.CardImg(src=app.get_asset_url('long_data.png'),
+                        style={'height': '30%', 'width': '30%'}, className='center', top=True),
+
                     html.Br(),
 
-                    html.Div(
-                        "Negative: Score < -0.2",
-                    ),
-                    html.Div(
-                        "Neutral: Score between -0.2 and 0.2",
-                    ),
-                    html.Div(
-                        "Positive: Score > 0.2",
-                    ),
+                    html.H5(
+                        "Next, we dropped these 3 columns as we felt that they were not relevant to Prime: ",
+                        className='card-text'
+                    ), 
+
+                    dbc.CardImg(src=app.get_asset_url('droppedcols.png'),
+                        style={'height': '40%', 'width': '40%'}, className='center', top=True), 
+
+                    html.Br(),
+
+                    html.H5(
+                        "Lastly, we checked the top 5 most purchased items. High frequencies could hint that the products are often bought in tandem: ",
+                        className='card-text'
+                    ), 
+
+                    dbc.CardImg(src=app.get_asset_url('top5.png'),
+                        style={'height': '60%', 'width': '60%'}, className='center', top=True),
+                    
+                    html.Br(),
+
+                    html.H5(
+                        "We can see that basic food items and condiments are purhcased the most often, probably because of their versatility. On the other hand, items which are purchased the least are often expensive and cater to a very niche audience. Examples include: ",
+                        className='card-text'
+                    ), 
+                    dbc.CardImg(src=app.get_asset_url('low5.png'),
+                        style={'height': '40%', 'width': '40%'}, className='center', top=True),
+                    
+                    html.Br(),   
+
+                    html.H5(
+                        "For our analysis, we set our minimum confidence and support to be = 0.4. The number of items in each basket has to be > 1 in order to ensure that there will be both antecendents and consequents. However, for this presentation, we will be playing around with other values as well. For the sake of simplicity in this presentation, we have limited the number of items in the basket to be = 2",
+                        className='card-text'
+                    ), 
                 ]
             ),
             dbc.CardFooter(''),
@@ -111,32 +139,33 @@ layout = dbc.Container([
                 [
 
                     html.H5(
-                        'We determine the percentage ratio of positive and negative reviews. We then conduct word '
-                        'review based on positive and negative feedback, to determine what to continue doing and what '
-                        'to improve on.',
+                        "When minimum confidence = 0.4, minimum support = 0.4 and minimum lift = 1: ",
                         className="card-text",
                     ),
 
                     html.Br(),
 
                     html.H5(
-                        'The threshold of the sentiment analysis is set to ±0.2. If the compound score of a review is '
-                        'greater than 0.2, the review is considered positive. If the score is less than -0.2, '
-                        'the review is negative.',
+                        "We can see that most of the items here are in the most frequently purchased graph shown earlier. Because lifts are greater than 1, we can say with confidence that the antecedent will boost the occurrence of the consequent. ",
                         className='card-text'
                     ),
 
                     html.Br(),
 
-                    html.Div(
-                        "Negative: Score < -0.2",
+                    html.H5(
+                        "Prime Supermarket can thus consider placing these items near each other. For example, placing the bread, condiments and baking section near each other could potentially save customers lots of time, and at the same time boosting sales of these items. ",
+                        className='card-text'
                     ),
-                    html.Div(
-                        "Neutral: Score between -0.2 and 0.2",
+
+                    html.Br(),
+
+                    html.H5(
+                        "If you observe carefully, you'll realise that most of the items in these rules are considered as necessities. Thus, customers are likely to purchase these items regularly to restock their supply at home. Hence, Prime can consider placing these items at the back of the store so that customers have to navigate through the entire store to find them. The longer a customer stays in a shop, the higher the probability that he will purchase additional items.",
+                        className='card-text'
                     ),
-                    html.Div(
-                        "Positive: Score > 0.2",
-                    ),
+
+                    html.Br(),
+
                 ]
             ),
             dbc.CardFooter(''),
