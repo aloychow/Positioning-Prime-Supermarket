@@ -22,7 +22,7 @@ sidebar = html.Div(
 
                 dbc.NavLink("Optical Character Recognition", href="/apps/ocr"),
 
-                dbc.NavLink("Fast Region CNN", href="/apps/rcnn"),
+                dbc.NavLink("YOLO", href="/apps/rcnn"),
 
             ],
             vertical=True,

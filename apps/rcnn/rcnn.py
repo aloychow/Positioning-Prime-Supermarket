@@ -10,7 +10,7 @@ layout = dbc.Container([
     # Header
     dbc.Row([
         dbc.Col([
-            html.H2("Region Convolutional Neural Networks", className='text-center text-white font-weight-normal p-4')
+            html.H2("YOLO", className='text-center text-white font-weight-normal p-4')
         ])
     ]),
 
@@ -46,7 +46,10 @@ layout = dbc.Container([
             dbc.CardHeader(html.H4("Method", className="text-white text-center")),
             dbc.CardBody(
                 [
+                    dbc.CardImg(src=app.get_asset_url('yolo-compare.png'),
+                                style={'height': '100%', 'width': '100%'}, className='center', top=True),
                     dbc.CardImg(src=app.get_asset_url('yolo.png'),
+
                                 style={'height': '100%', 'width': '100%'}, className='center', top=True),
 
                     html.Br(),
@@ -161,7 +164,8 @@ layout = dbc.Container([
 
                     html.Br(),
 
-                    html.Video(src=app.get_asset_url('supermarket-video.mp4'), controls=True, style={'height': '100%', 'width': '100%'}),
+                    html.Video(src=app.get_asset_url('supermarket-video.mp4'), controls=True,
+                               style={'height': '100%', 'width': '100%'}),
 
                     html.H5(
                         'We also tested on actual camera footage.',
