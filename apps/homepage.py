@@ -66,20 +66,14 @@ layout = dbc.Container([
                         [
                             html.H4("Sentiment Analysis", className="text-white"),
                             html.P(
-                                "Analyses sentiment of  Prime Supermarket .",
+                                "Analyses sentiment of  Prime Supermarket feedback.",
                                 className="card-text",
                             ),
 
-                            html.Div(
-                                "• Candlestick Patterns",
-                            ),
-                            html.Div(
-                                "• Statistical Indicators",
-                            ),
                             html.Br(),
                             html.Br(),
                             html.Br(),
-                            dbc.Button("Read More", color="primary"),
+                            # dbc.Button("Read More", color="primary"),
                         ]
                     ),
                 ]
@@ -95,16 +89,10 @@ layout = dbc.Container([
                         [
                             html.H4("Association Rules", className="text-white"),
                             html.P(
-                                "Used to .",
-                            ),
-                            html.Div(
-                                "• Candlestick Patterns",
-                            ),
-                            html.Div(
-                                "• Statistical Indicators",
+                                "Used to optimise positioning of grocery produce.",
                             ),
                             html.Br(),
-                            dbc.Button("Read More", color="primary"),
+                            # dbc.Button("Read More", color="primary"),
                         ]
                     ),
                 ]
@@ -120,16 +108,16 @@ layout = dbc.Container([
                         [
                             html.H4("Neural Networks", className="text-white"),
                             html.P(
-                                "Analyses sentiment trends to infer correlation with stock performance.",
+                                "Used to automate data collection for further analysis.",
                             ),
                             html.Div(
-                                "• User Sentiments",
+                                "• OCR",
                             ),
                             html.Div(
-                                "• Keyword Sentiments",
+                                "• YOLO",
                             ),
                             html.Br(),
-                            dbc.Button("Read More", color="primary"),
+                            # dbc.Button("Read More", color="primary"),
                         ]
                     ),
                 ]
