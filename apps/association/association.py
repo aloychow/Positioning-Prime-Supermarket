@@ -26,7 +26,8 @@ layout = dbc.Container([
     # Header
     dbc.Row([
         dbc.Col([
-            html.H2("Association Rules", className='text-center text-white font-weight-normal p-4')
+            html.H2("Association Rules", className='text-center text-white font-weight-normal p-4'),
+            html.H4("Alicia Chua", className = 'text-center text-white font-weight-normal p-4'),
         ])
     ]),
 
@@ -41,7 +42,7 @@ layout = dbc.Container([
                 [
 
                     html.H5(
-                        "Product placement influences customers' shopping behaviour. By placing complementary products near each other, customers will not be required to navigate through the entire store to find a complementary item. This will greatly enhance customers' shopping experience through increased convenience. Moreover, it also promotes the purchasing of complementary items, boosting sales for Prime. Given this in mind, we decided to use association rules to help Prime Supermarket find the most important complementary product pairings .",
+                        "Product placement influences customers' shopping behaviour. By placing complementary products near each other, customers will find it easier to search for a complementary item. This will greatly enhance their shopping experience through increased convenience. Moreover, it also promotes the purchasing of complementary items, boosting sales for Prime. Given this in mind, we decided to use association rules to help Prime Supermarket find the most important complementary product pairings .",
                         className="card-text",
                     ),
 
@@ -79,13 +80,19 @@ layout = dbc.Container([
                     ),
 
                     html.H5(
-                        "First, the dataset was originally in a long data format. Thus, we first converted it into a wide data format: ",
+                        "First, the dataset was originally in a long data format: ",
                         className='card-text'
                     ),
 
                     dbc.CardImg(src=app.get_asset_url('long_data.png'),
                         style={'height': '30%', 'width': '30%'}, className='center', top=True),
 
+                    html.Br(),
+
+                    html.H5(
+                        "Thus, we first converted it into a wide data format. ",
+                        className='card-text'
+                    ), 
                     html.Br(),
 
                     html.H5(
@@ -104,12 +111,12 @@ layout = dbc.Container([
                     ), 
 
                     dbc.CardImg(src=app.get_asset_url('top5.png'),
-                        style={'height': '60%', 'width': '60%'}, className='center', top=True),
+                        style={'height': '70%', 'width': '70%'}, className='center', top=True),
                     
                     html.Br(),
 
                     html.H5(
-                        "We can see that basic food items and condiments are purhcased the most often, probably because of their versatility. On the other hand, items which are purchased the least are often expensive and cater to a very niche audience. Examples include: ",
+                        "We can see that basic food items and condiments are purchased the most often, probably because of their versatility. On the other hand, items which are purchased the least are often expensive and cater to a very niche audience. Examples include: ",
                         className='card-text'
                     ), 
                     dbc.CardImg(src=app.get_asset_url('low5.png'),

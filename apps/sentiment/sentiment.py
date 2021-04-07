@@ -26,7 +26,8 @@ layout = dbc.Container([
     # Header
     dbc.Row([
         dbc.Col([
-            html.H2("Sentiment Analysis", className='text-center text-white font-weight-normal p-4')
+            html.H2("Sentiment Analysis", className='text-center text-white font-weight-normal p-4'),
+            html.H4("Chai Jia Ying", className = 'text-center text-white font-weight-normal p-4'),
         ])
     ]),
 

@@ -10,7 +10,8 @@ layout = dbc.Container([
     # Header
     dbc.Row([
         dbc.Col([
-            html.H2("Optical Character Recognition", className='text-center text-white font-weight-normal p-4')
+            html.H2("Optical Character Recognition", className='text-center text-white font-weight-normal p-4'),
+            html.H4("Jie Sheng", className = 'text-center text-white font-weight-normal p-4'),
         ])
     ]),
 
