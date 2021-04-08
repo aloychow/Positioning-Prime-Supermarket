@@ -150,7 +150,7 @@ layout = dbc.Container([
                     html.Br(),
                     html.H5('Below a visual representation of the text segmentation and recognition from Tesseract:'),
 
-                    dbc.CardImg(src=app.get_asset_url('ocr3.png'),
+                    dbc.CardImg(src=app.get_asset_url('ocr4.png'),
                                 style={'height': '100%', 'width': '100%'}, className='center', top=True),
 
                     html.Br(),
@@ -168,12 +168,11 @@ layout = dbc.Container([
                     html.Br(),
                     html.H5('Below are the results from this receipt after passing the receipt through our pipeline:'),
 
-                    dbc.CardImg(src=app.get_asset_url('ocr4.png'),
-                                style={'height': '100%', 'width': '100%'}, className='center', top=True),
-
                     dbc.CardImg(src=app.get_asset_url('ocr5.png'),
                                 style={'height': '100%', 'width': '100%'}, className='center', top=True),
 
+                    dbc.CardImg(src=app.get_asset_url('ocr8.png'),
+                                style={'height': '100%', 'width': '100%'}, className='center', top=True),
                     html.Br(),
 
                 ]
