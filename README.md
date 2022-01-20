@@ -1,7 +1,7 @@
 # Positioning Prime
 
 The Covid-19 pandemic has led to many firms requiring restructuring, with those that failed to adapt, closing down. Prime Supermarket, which is a supermarket chain in Singapore and one which does not utilise technologies (such as online shopping), will find it hard to tide through the falling demand of physical shopping. As such, my group and I have decided to utilise analytical tools to bolster Prime's situation.
-View and try out the [Prime Dashboard application](https://aloysius-portfolio.webflow.io/project/repositioning-prime).
+View and try out the [Prime Dashboard application](https://supermarket-analysis.herokuapp.com/apps/homepage).
 
 ## Our Three-Pronged Approach
 To continue thriving, Prime Supermarket has to be able to adapt by growing its business and maintaining market share. Prime Supermarket mainly operates through physical stores (24 outlets as of 2021). Hence, we will focus on tackling their offline business by employing the use of other data analytics methods to provide deeper analysis for Prime Supermarket. We aim to take advantage of analytics software to maximise Prime’s market share and better position Prime in this competitive landscape - through:
